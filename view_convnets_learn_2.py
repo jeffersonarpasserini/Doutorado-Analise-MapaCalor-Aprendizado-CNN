@@ -15,7 +15,7 @@ from keras.applications.vgg16 import preprocess_input, decode_predictions
 import numpy as np
 
 # The local path to our target image
-img_path = '/Users/fchollet/Downloads/creative_commons_elephant.jpg'
+img_path = "/home/jeffersonpasserini/dados/ProjetosPos/Doutorado-Analise-MapaCalor-Aprendizado-CNN/clear.000.jpg"
 
 # `img` is a PIL image of size 224x224
 img = image.load_img(img_path, target_size=(224, 224))
@@ -92,4 +92,4 @@ heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
 superimposed_img = heatmap * 0.4 + img
 
 # Save the image to disk
-cv2.imwrite('/Users/fchollet/Downloads/elephant_cam.jpg', superimposed_img)
+cv2.imwrite("/home/jeffersonpasserini/dados/ProjetosPos/Doutorado-Analise-MapaCalor-Aprendizado-CNN/elephant_cam.jpg", superimposed_img)
